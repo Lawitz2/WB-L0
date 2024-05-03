@@ -1,0 +1,62 @@
+{
+  "order_uid": "90gd1eb7b2b84b6test",
+  "track_number": "WBILMTESTINFINITY",
+  "entry": "test2",
+  "delivery": {
+    "name": "Test Testov2",
+    "phone": "+972222222",
+    "zip": "2639809",
+    "city": "Kirov",
+    "address": "Ploshad Mira 22",
+    "region": "Crimea",
+    "email": "test3@gmail.com"
+  },
+  "payment": {
+    "transaction": "transaction3",
+    "request_id": "",
+    "currency": "USD",
+    "provider": "wbpay",
+    "amount": 1811,
+    "payment_dt": 11,
+    "bank": "alpha",
+    "delivery_cost": 1501,
+    "goods_total": 317,
+    "custom_fee": 0
+  },
+  "items": [
+    {
+      "chrt_id": 9934930,
+      "track_number": "WBILMTESTINFINITY",
+      "price": 453,
+      "rid": "ab4219087a764ae0btest",
+      "name": "Mascaras",
+      "sale": 30,
+      "size": "0",
+      "total_price": 317,
+      "nm_id": 2389212,
+      "brand": "Vivienne Sabo",
+      "status": 202
+    },
+    {
+      "chrt_id": 8276,
+      "track_number": "WBILMTESTINFINITY",
+      "price": 453,
+      "rid": "ab42190874ae0btest",
+      "name": "Mask",
+      "sale": 37,
+      "size": "0",
+      "total_price": 20,
+      "nm_id": 2389212,
+      "brand": "Vivienne",
+      "status": 202
+    }
+  ],
+  "locale": "en",
+  "internal_signature": "",
+  "customer_id": "test",
+  "delivery_service": "meest",
+  "shardkey": "9",
+  "sm_id": 99,
+  "date_created": "2021-11-26T06:22:19Z",
+  "oof_shard": "1"
+}

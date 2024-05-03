@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<h1>Pretend this is a meaningful text</h1>
+
+<form action="/service/static" method="post">
+    <label for="order_uid">order_uid:</label>
+    <input type="text" size="25" id="order_uid" name="order">
+    <input type="submit">
+</form><br>
+
+<table style="width: 20%;" border="2">
+    <tbody>
+    <tr style="height: 20px;">
+        <td style="height: 20px; width: 10%">order uid</td>
+        <td style="height: 20px; width: 10%">{{.OrderUid}}</td>
+    </tr>
+    <tr style="height: 20px;">
+        <td style="height: 20px; width: 10%">track number</td>
+        <td style="height: 20px; width: 10%">{{.TrackNumber}}</td>
+    </tr>
+    <tr style="height: 20px;">
+        <td style="height: 20px; width: 10%">entry</td>
+        <td style="height: 20px; width: 10%">{{.Entry}}</td>
+    </tr>
+    <tr style="height: 20px;">
+        <td style="height: 20px; width: 10%">locale</td>
+        <td style="height: 20px; width: 10%">{{.Locale}}</td>
+    </tr>
+    <tr style="height: 20px;">
+        <td style="height: 20px; width: 10%">internal signature</td>
+        <td style="height: 20px; width: 10%">{{.InternalSignature}}</td>
+    </tr>
+    <tr style="height: 20px;">
+        <td style="height: 20px; width: 10%">customer id</td>
+        <td style="height: 20px; width: 10%">{{.CustomerId}}</td>
+    </tr>
+    <tr style="height: 20px;">
+        <td style="height: 20px; width: 10%">delivery service</td>
+        <td style="height: 20px; width: 10%">{{.DeliveryService}}</td>
+    </tr>
+    <tr style="height: 20px;">
+        <td style="height: 20px; width: 10%">shardkey</td>
+        <td style="height: 20px; width: 10%">{{.Shardkey}}</td>
+    </tr>
+    <tr style="height: 20px;">
+        <td style="height: 20px; width: 10%">sm id</td>
+        <td style="height: 20px; width: 10%">{{.SmId}}</td>
+    </tr>
+    <tr style="height: 20px;">
+        <td style="height: 20px; width: 10%">date created</td>
+        <td style="height: 20px; width: 10%">{{.DateCreated}}</td>
+    </tr>
+    <tr style="height: 20px;">
+        <td style="height: 20px; width: 10%">oof shard</td>
+        <td style="height: 20px; width: 10%">{{.OofShard}}</td>
+    </tr>
+    <tr style="height: 20px;">
+        <td colspan="2" style="height: 20px; text-align: center">delivery</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">name</td>
+        <td style="height: 20px; width: 10%">{{.Delivery.Name}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">phone</td>
+        <td style="height: 20px; width: 10%">{{.Delivery.Phone}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">zip</td>
+        <td style="height: 20px; width: 10%">{{.Delivery.Zip}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">city</td>
+        <td style="height: 20px; width: 10%">{{.Delivery.City}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">address</td>
+        <td style="height: 20px; width: 10%">{{.Delivery.Address}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">region</td>
+        <td style="height: 20px; width: 10%">{{.Delivery.Region}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">email</td>
+        <td style="height: 20px; width: 10%">{{.Delivery.Email}}</td>
+    </tr>
+    <tr style="height: 20px;">
+        <td colspan="2" style="height: 20px; text-align: center">payment</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">transaction</td>
+        <td style="height: 20px; width: 10%">{{.Payment.Transaction}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">request id</td>
+        <td style="height: 20px; width: 10%">{{.Payment.RequestId}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">currency</td>
+        <td style="height: 20px; width: 10%">{{.Payment.Currency}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">provider</td>
+        <td style="height: 20px; width: 10%">{{.Payment.Provider}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">amount</td>
+        <td style="height: 20px; width: 10%">{{.Payment.Amount}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">payment dt</td>
+        <td style="height: 20px; width: 10%">{{.Payment.PaymentDt}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">bank</td>
+        <td style="height: 20px; width: 10%">{{.Payment.Bank}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">delivery cost</td>
+        <td style="height: 20px; width: 10%">{{.Payment.DeliveryCost}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">goods total</td>
+        <td style="height: 20px; width: 10%">{{.Payment.GoodsTotal}}</td>
+    </tr>
+    <tr style="height: 21px;">
+        <td style="height: 20px; width: 10%">custom fee</td>
+        <td style="height: 20px; width: 10%">{{.Payment.CustomFee}}</td>
+    </tr>
+    </tbody>
+</table>
+<br><br>
+<b>Items</b>
+{{range .Items}}<br>
+    Chrt ID: {{.ChrtId}}<br>
+    Track number: {{.TrackNumber}}<br>
+    Price: {{.Price}}<br>
+    Rid: {{.Rid}}<br>
+    Name: {{.Name}}<br>
+    Sale: {{.Sale}}<br>
+    Size: {{.Size}}<br>
+    Total price: {{.TotalPrice}}<br>
+    Nm ID: {{.NmId}}<br>
+    Brand: {{.Brand}}<br>
+    Status: {{.Status}}<br>
+{{end}}
+</body>
+</html>
