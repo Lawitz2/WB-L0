@@ -17,14 +17,14 @@ func ServerInit() {
 	tplNotFound, _ = tplNotFound.ParseGlob("dynamic/notfound.html")
 
 	MainHandle := func(w http.ResponseWriter, r *http.Request) {
-		v := r.FormValue("order")
+		v := r.FormValue("order") // получаем order uid с запроса
 		v = strings.Trim(v, " ")
 		if len(v) == 0 {
 			slog.Error("empty input")
 			tplNotFound.ExecuteTemplate(w, "notfound.html", v)
 			return
 		}
-		box, err := RetrieveOrder(v)
+		box, err := RetrieveOrder(v) // тянем данные о заказе по order uid
 		if err != nil {
 			slog.Error("couldn't retrieve order ", err.Error())
 			tplNotFound.ExecuteTemplate(w, "notfound.html", v)

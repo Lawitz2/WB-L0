@@ -18,6 +18,7 @@ func CreateStream() (*nats.Conn, jetstream.ConsumeContext) {
 		os.Exit(1)
 	}
 
+	// запускаем jetstream
 	js, err := jetstream.New(nc)
 	if err != nil {
 		slog.Error("jetstream.new err:", err.Error())
@@ -25,6 +26,7 @@ func CreateStream() (*nats.Conn, jetstream.ConsumeContext) {
 		os.Exit(1)
 	}
 
+	// создаем новый поток данных
 	stream, err := js.CreateStream(ctx, jetstream.StreamConfig{
 		Name:     "ORDERS",
 		Subjects: []string{"ORDERS.*"},
@@ -35,6 +37,7 @@ func CreateStream() (*nats.Conn, jetstream.ConsumeContext) {
 		os.Exit(1)
 	}
 
+	// создаем потребителя
 	consumer, err := stream.CreateOrUpdateConsumer(ctx, jetstream.ConsumerConfig{
 		Durable:   "CONS",
 		AckPolicy: jetstream.AckExplicitPolicy,
@@ -45,6 +48,7 @@ func CreateStream() (*nats.Conn, jetstream.ConsumeContext) {
 		os.Exit(1)
 	}
 
+	// подписываемся на поток данных
 	msgs, err := consumer.Consume(Jsonread)
 	if err != nil {
 		slog.Error("couldn't consume messages: ", err.Error())
